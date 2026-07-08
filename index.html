@@ -117,34 +117,431 @@
   ]
 }
   </script>
-  <style>
-:root { --fg:#1a1a2e; --muted:#5c5c72; --accent:#2d5bff; --bg:#ffffff; --card:#f6f7fb; --line:#e6e8f0; }
-* { box-sizing: border-box; }
-body { margin:0; font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Malgun Gothic", sans-serif; color:var(--fg); background:var(--bg); line-height:1.7; }
-main { max-width: 760px; margin: 0 auto; padding: 2rem 1.25rem 4rem; }
-header { padding: 2rem 0 1rem; border-bottom: 2px solid var(--line); margin-bottom: 1.5rem; }
-.eyebrow { color: var(--accent); font-weight: 600; margin: 0 0 .25rem; letter-spacing: .02em; }
-h1 { font-size: 2.4rem; margin: 0; }
-h2 { font-size: 1.25rem; margin: 2rem 0 .5rem; padding-left: .6rem; border-left: 4px solid var(--accent); }
-section p { margin: .25rem 0 0; }
-ul { margin: .5rem 0 0; padding-left: 1.2rem; }
-li { margin: .25rem 0; }
-.facts, .symbols { list-style: none; padding: 1rem 1.2rem; background: var(--card); border-radius: 12px; }
-.faq details { border: 1px solid var(--line); border-radius: 10px; padding: .5rem .9rem; margin: .5rem 0; }
-.faq summary { cursor: pointer; font-weight: 600; }
-.faq details p { margin: .5rem 0 .25rem; color: var(--muted); }
-.sources { font-size: .9rem; color: var(--muted); }
-a { color: var(--accent); }
-footer { margin-top: 3rem; padding-top: 1rem; border-top: 1px solid var(--line); color: var(--muted); font-size: .85rem; }
-</style>
+  <script id="region-data" type="application/json">
+{
+  "characteristics": "북구의 인구는 2021년 기준 약 28만 3천 명으로, 화명·덕천 신도시 개발 이후 부산 서북부의 밀집 주거 지역으로 자리 잡았습니다. 면적은 39.36㎢이며 구포동·금곡동·화명동·덕천동·만덕동 5개 법정동을 13개 행정동으로 나누어 운영합니다. 산업 구조는 대규모 아파트 단지를 배후로 한 생활 밀착형 상업·서비스업 중심이며, 구포시장과 덕천·화명의 상권이 지역 경제의 축을 이룹니다. 일제강점기와 6·25 피난 시절 미군 구호 밀가루로 만들어 먹던 구포국수는 이 지역을 상징하는 서민 음식으로, 오늘날 향토 먹거리 브랜드로 계승되고 있습니다. 부산과학기술대학교와 한국폴리텍7대학 부산캠퍼스 등 교육기관이 자리해 젊은 인구 유입에도 기여합니다. 낙동강을 낀 강변 도시이면서 신도시와 재래시장이 공존하는 이중적 도시 성격이 북구를 규정합니다.",
+  "coords": {
+    "lat": 35.1974,
+    "lng": 129.0092
+  },
+  "cultural_heritage": [
+    {
+      "description": "만덕동에 자리한 통일신라 후기에서 고려 전기의 사찰 터 유적으로, 절터의 흔적은 대부분 사라졌으나 입구로 추정되는 곳에 당간지주가 남아 당시 대규모 가람의 규모를 짐작하게 합니다.",
+      "name": "만덕사지 당간지주"
+    },
+    {
+      "description": "2023년 1월 개관한 문화시설로 북구 연대기, 문화재, 구포만세운동, 구포나루, 구포 먹거리, 근대유물 등을 전시해 지역의 역사와 문화를 한눈에 살펴볼 수 있습니다.",
+      "name": "부산북구역사문화홍보관"
+    },
+    {
+      "description": "구포 감동진의 역사와 문화에 현대적 감성을 더한 북구의 대표 향토 축제로, 화명생태공원 연꽃단지 일원에서 열려 낙동강 나루의 정취를 재현합니다.",
+      "name": "낙동강 구포나루 축제"
+    },
+    {
+      "description": "피난 시절 서민의 소울푸드였던 구포국수를 주제로 한 체험시설로, 국수를 맛보고 구입하는 공간과 맷돌·반죽 체험, 어린이 국수 만들기 체험을 층별로 갖추고 있습니다.",
+      "name": "구포국수체험관"
+    },
+    {
+      "description": "덕천동 고분군과 금곡동 율리의 바위그늘유적은 선사·삼국시대 사람들의 생활상을 보여주는 유적으로, 낙동강 유역에 일찍부터 사람이 정착했음을 증언합니다.",
+      "name": "덕천동 고분군·율리 바위그늘유적"
+    }
+  ],
+  "faq": [
+    {
+      "answer": "부산광역시 북구 낙동대로1570번길 33(구포동)에 있으며, 도시철도 3호선 구포역과 가깝습니다.",
+      "question": "북구청은 어디에 있나요?"
+    },
+    {
+      "answer": "낙동강을 향해 고개를 뻗은 거북 모양의 산줄기에서 유래해 '거북이 포구'를 뜻하는 구포(龜浦)라는 이름이 붙었습니다.",
+      "question": "'구포'라는 지명은 어떻게 생겼나요?"
+    },
+    {
+      "answer": "일제강점기와 6·25 피난 시절 서민의 소울푸드였던 구포국수가 대표 음식으로, 구포만세거리의 구포국수체험관에서 맛보고 체험할 수 있습니다.",
+      "question": "북구를 대표하는 음식은 무엇인가요?"
+    },
+    {
+      "answer": "화명생태공원은 낙동강 둔치의 강변 습지·체육공원이고, 화명수목원은 금정산 자락에 조성된 부산 최초의 공립수목원으로 성격이 다릅니다.",
+      "question": "화명생태공원과 화명수목원은 어떻게 다른가요?"
+    },
+    {
+      "answer": "도시철도 2호선과 3호선이 지나고 덕천역에서 두 노선이 환승되어 서면·연산·부산역 등 도심 방면 이동이 편리합니다.",
+      "question": "북구에서 지하철로 이동하기 편한가요?"
+    },
+    {
+      "answer": "1919년 3월 29일 구포장터에서 일어난 만세운동을 기념하는 거리로, 항일 역사와 구포국수 문화를 함께 만날 수 있는 명소입니다.",
+      "question": "구포만세거리는 어떤 곳인가요?"
+    }
+  ],
+  "geography_nature": "북구는 부산광역시의 서북부 끝자락에 자리하며 김해평야를 사이에 두고 낙동강과 마주하는 전형적인 동고서저 지형을 이룹니다. 동쪽으로는 해발 800m가 넘는 금정산과 백양산 능선이 병풍처럼 솟아 금정구·사상구와 경계를 짓고, 서쪽 저지대에는 낙동강 본류가 남북으로 흐르며 넓은 강안 평지를 만들어 냅니다. 산지에서 발원한 대천천과 대치천이 시가지를 가로질러 낙동강으로 흘러들며, 대천천 계곡은 여름철 도심 피서지로 사랑받습니다. 낙동강 하구의 넓은 둔치에는 화명생태공원과 갈대·연꽃 습지가 조성되어 철새가 찾아드는 생태 공간이 형성되었습니다. 산과 강 사이 좁은 회랑을 따라 구포·덕천·화명·금곡의 시가지가 남북으로 길게 이어지는 것이 이 지역 지형의 특징입니다. 대동화명대교와 구포대교가 낙동강을 건너 김해·강서 방면과 연결됩니다.",
+  "history": "북구 일대는 삼한시대 변한 문화권에 속했고 금관가야의 영향을 거쳐 신라 지증왕 때 복속되었으며, 통일신라기에는 삽량주·양주에 편제되었습니다. 지역명 '구포(龜浦)'는 낙동강을 향해 고개를 뻗은 거북 모양의 산줄기에서 유래한 '거북이 포구'라는 뜻으로, 낙동강 수운이 발달한 나루터의 역사를 담고 있습니다. 1682년 세곡을 저장하던 감동창이 설치되면서 구포는 낙동강 물류의 거점으로 크게 번성했고, 오일장 구포장은 인근 평야와 동래 지역을 잇는 교역 중심지가 되었습니다. 1919년 3월 29일 구포장터에서는 대규모 만세운동이 일어나 오늘날 구포만세거리로 기념되고 있습니다. 행정구역으로는 1978년 2월 15일 부산진구와 김해군 일부를 관할로 북구가 신설되었고, 1988년 자치구로 승격한 뒤 1989년 강서구, 1995년 사상구가 잇따라 분리되어 지금의 구역이 확정되었습니다.",
+  "intro": "부산광역시 북구는 낙동강 물길과 금정산 자락이 맞닿는 강변 도심으로, 오랜 세월 '구포나루'를 중심으로 사람과 물자가 모여든 교역의 고장입니다. 조선 후기부터 이어진 구포장(구포시장)은 낙동강 유역 곡물과 생활물자가 집산되던 상권의 심장이었고, 오늘날에도 400년 전통의 재래시장으로 활기를 잇고 있습니다. 화명·덕천·만덕 일대는 1990년대 이후 대규모 아파트 신도시로 탈바꿈해 30만 명 가까운 주민이 사는 부산 서북부의 대표 주거지로 성장했습니다. 강변에는 화명생태공원과 금빛노을브릿지가 펼쳐지고, 금정산 기슭에는 부산 최초의 공립 화명수목원이 자리해 도심 속 자연 휴식처가 풍부합니다. 구포국수와 구포만세운동으로 상징되는 서민의 삶과 저항의 역사가 켜켜이 쌓인, 이야기가 있는 동네입니다.",
+  "landmarks": [
+    {
+      "description": "조선 후기 오일장 '구포장'에서 비롯된 400년 전통의 재래시장으로, 낙동강 물류의 집산지였던 역사를 이어받아 지금도 부산 서북부 최대 규모의 활기찬 전통시장으로 운영됩니다.",
+      "name": "구포시장"
+    },
+    {
+      "description": "구포에서 대동화명대교에 이르는 낙동강 둔치에 조성된 대형 강변 공원으로, 봄 유채와 여름 연꽃, 가을 코스모스가 계절마다 장관을 이루고 야구장·축구장 등 38면의 체육시설을 갖추고 있습니다.",
+      "name": "화명생태공원"
+    },
+    {
+      "description": "2021년 화명생태공원 앞 낙동강에 준공된 부산 최장 보행교로, 강 위로 뻗은 곡선 데크에서 노을과 야경을 감상할 수 있어 북구의 새로운 랜드마크로 떠올랐습니다.",
+      "name": "금빛노을브릿지"
+    },
+    {
+      "description": "1919년 3월 29일 구포장터에서 일어난 만세운동을 기념해 조성된 거리로, 구포국수체험관과 벽화·기념 조형물이 어우러져 지역의 항일 역사를 되새기는 공간입니다.",
+      "name": "구포만세거리"
+    }
+  ],
+  "nature_rest": [
+    {
+      "description": "금정산 자락에 조성된 부산 최초의 공립수목원으로, 수목유전자원을 보존·전시하며 사계절 다양한 식물을 관찰할 수 있어 가족 나들이와 생태 체험 명소로 인기가 높습니다.",
+      "name": "화명수목원"
+    },
+    {
+      "description": "금정산에서 발원해 화명동을 지나는 대천천의 상류 계곡으로, 맑은 물과 숲그늘이 어우러져 여름철 도심 속 피서지이자 산책·물놀이 공간으로 사랑받습니다.",
+      "name": "대천천 계곡"
+    },
+    {
+      "description": "구 동쪽을 병풍처럼 감싸는 금정산과 백양산은 만덕고개를 넘나드는 능선 산행 코스를 품고 있어, 주민들이 즐겨 찾는 도심 근교 등산 명소입니다.",
+      "name": "금정산·백양산 등산로"
+    },
+    {
+      "description": "화명생태공원 안에 조성된 장미 정원으로, 초여름이면 형형색색의 장미가 만개해 은은한 꽃향기 속에서 산책과 사진 촬영을 즐길 수 있는 휴식 공간입니다.",
+      "name": "화명장미원"
+    },
+    {
+      "description": "화명생태공원을 따라 이어지는 낙동강변 자전거길은 강바람을 맞으며 라이딩과 조깅을 즐길 수 있는 코스로, 부산과 김해 방면으로 길게 연결됩니다.",
+      "name": "낙동강 자전거길"
+    }
+  ],
+  "org_slug": "kr-busan-buk",
+  "sido": "부산광역시",
+  "sigungu": "북구",
+  "symbols": {
+    "bird": "까치",
+    "flower": "철쭉",
+    "tree": "팽나무"
+  },
+  "transport": "북구는 부산 도시철도 2호선과 3호선이 관통해 시내 곳곳으로의 접근성이 좋습니다. 2호선은 금곡·동원·율리·화명·수정·덕천·구명·구남역을 지나 화명·금곡 신도시와 서면 방면을 잇고, 3호선은 구포·덕천·숙등·남산정·만덕역을 거쳐 덕천에서 2호선과 환승됩니다. 덕천역은 두 노선이 만나는 환승 거점으로 북구 교통의 중심 역할을 합니다. 도로 교통으로는 낙동강을 건너는 구포대교와 대동화명대교가 김해·강서 방면과 연결되고, 만덕터널과 만덕고개가 동래·도심 방면 통행로 역할을 합니다. 경부선 구포역은 일부 무궁화호·KTX가 정차하는 철도 관문으로, 부산 서북부에서 서울·경상권으로 향하는 이용객이 많습니다."
+}
+  </script>
 </head>
 <body>
-  <main>
-    <header>
-      <p class="eyebrow">부산광역시</p>
-      <h1>북구</h1>
-    </header>
-    <div class="content">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&family=Raleway:wght@300;500;800&display=swap');
+:root{
+  --buk-royal:#4169E1;
+  --buk-lawn:#7CFC00;
+  --buk-ink:#0a1430;
+  --buk-deep:#050b1e;
+  --buk-mist:#dbe6ff;
+}
+*{box-sizing:border-box}
+.buk-root{
+  font-family:'Noto Sans KR',system-ui,sans-serif;
+  color:var(--buk-mist);
+  background:linear-gradient(180deg,#050b1e 0%,#08163a 40%,#0a1e4d 100%);
+  line-height:1.85;
+  overflow-x:hidden;
+  position:relative;
+}
+.buk-vel-fx{color:var(--buk-lawn)}
+.buk-royal-fx{color:var(--buk-royal)}
+
+/* fixed river backdrop layer */
+.buk-riverbg{
+  position:fixed;inset:0;z-index:0;pointer-events:none;
+  background:
+    radial-gradient(120% 80% at 20% 0%, rgba(65,105,225,.30), transparent 60%),
+    radial-gradient(100% 60% at 90% 20%, rgba(124,252,0,.10), transparent 55%),
+    linear-gradient(180deg,#050b1e,#08163a 55%,#0a2050);
+}
+.buk-riverbg canvas{position:absolute;inset:0;width:100%;height:100%}
+
+.buk-shell{position:relative;z-index:1;max-width:1180px;margin:0 auto;padding:0 clamp(18px,4vw,56px)}
+
+/* HERO */
+.buk-hero{
+  min-height:100vh;display:flex;flex-direction:column;justify-content:center;
+  padding:12vh 0 8vh;position:relative;
+}
+.buk-kicker{
+  font-family:'Raleway',sans-serif;font-weight:800;letter-spacing:.42em;
+  text-transform:uppercase;font-size:clamp(11px,1.4vw,14px);
+  color:var(--buk-lawn);margin:0 0 22px;
+  display:flex;align-items:center;gap:14px;
+}
+.buk-kicker::before{content:"";width:clamp(40px,7vw,88px);height:1px;background:linear-gradient(90deg,var(--buk-lawn),transparent)}
+.buk-title{
+  font-family:'Noto Sans KR','Raleway',sans-serif;font-weight:700;
+  font-size:clamp(2.6rem,8.5vw,6.6rem);line-height:1.02;margin:0;
+  letter-spacing:-.02em;
+  color:#fff;text-shadow:0 0 60px rgba(65,105,225,.5);
+}
+.buk-title .buk-drop{display:block;color:var(--buk-royal);position:relative}
+.buk-lead{
+  margin:34px 0 0;max-width:640px;font-size:clamp(1rem,2vw,1.28rem);
+  font-weight:300;color:var(--buk-mist);
+}
+.buk-velbadge{
+  margin-top:46px;display:inline-flex;align-items:center;gap:18px;
+  padding:14px 26px;border:1px solid rgba(124,252,0,.4);border-radius:100px;
+  background:rgba(65,105,225,.08);backdrop-filter:blur(6px);
+  font-family:'Raleway',sans-serif;font-weight:500;letter-spacing:.16em;
+  text-transform:uppercase;font-size:12px;color:var(--buk-mist);align-self:flex-start;
+}
+.buk-velbadge .buk-gauge{
+  width:112px;height:6px;border-radius:100px;background:rgba(219,230,255,.18);overflow:hidden;position:relative;
+}
+.buk-velbadge .buk-gauge i{
+  position:absolute;inset:0;width:8%;background:linear-gradient(90deg,var(--buk-royal),var(--buk-lawn));
+  border-radius:100px;transition:width .18s ease-out;
+}
+.buk-velbadge b{color:var(--buk-lawn);font-variant-numeric:tabular-nums;min-width:36px;text-align:right}
+.buk-scrollcue{
+  position:absolute;left:0;bottom:5vh;display:flex;align-items:center;gap:12px;
+  font-family:'Raleway',sans-serif;letter-spacing:.3em;text-transform:uppercase;font-size:11px;
+  color:rgba(219,230,255,.6);
+}
+.buk-scrollcue .buk-mouse{width:22px;height:34px;border:1.5px solid rgba(124,252,0,.6);border-radius:12px;position:relative}
+.buk-scrollcue .buk-mouse::after{content:"";position:absolute;left:50%;top:7px;width:3px;height:7px;margin-left:-1.5px;background:var(--buk-lawn);border-radius:2px;animation:buk-wheel 1.6s infinite}
+@keyframes buk-wheel{0%{opacity:0;transform:translateY(0)}30%{opacity:1}100%{opacity:0;transform:translateY(11px)}}
+
+/* SECTION STAGE (holds injected content) */
+.buk-stage{position:relative;padding:8vh 0 14vh}
+.buk-stage-head{margin:0 0 8vh;max-width:720px}
+.buk-stage-head .buk-kicker{margin-bottom:16px}
+.buk-stage-head p{font-weight:300;font-size:clamp(1rem,1.8vw,1.15rem);color:var(--buk-mist);margin:0}
+
+/* the       <section id="intro">
+        <h2>지역 소개</h2>
+        <p>부산광역시 북구는 낙동강 물길과 금정산 자락이 맞닿는 강변 도심으로, 오랜 세월 &#x27;구포나루&#x27;를 중심으로 사람과 물자가 모여든 교역의 고장입니다. 조선 후기부터 이어진 구포장(구포시장)은 낙동강 유역 곡물과 생활물자가 집산되던 상권의 심장이었고, 오늘날에도 400년 전통의 재래시장으로 활기를 잇고 있습니다. 화명·덕천·만덕 일대는 1990년대 이후 대규모 아파트 신도시로 탈바꿈해 30만 명 가까운 주민이 사는 부산 서북부의 대표 주거지로 성장했습니다. 강변에는 화명생태공원과 금빛노을브릿지가 펼쳐지고, 금정산 기슭에는 부산 최초의 공립 화명수목원이 자리해 도심 속 자연 휴식처가 풍부합니다. 구포국수와 구포만세운동으로 상징되는 서민의 삶과 저항의 역사가 켜켜이 쌓인, 이야기가 있는 동네입니다.</p>
+      </section>
+      <section id="facts">
+        <h2>주요 통계</h2>
+        <ul class="facts">
+          <li>인구: 약 283,211명 (2021)</li>
+          <li>면적: 39.36 km²</li>
+          <li>신설: 1978년 2월 15일</li>
+        </ul>
+      </section>
+      <section id="history">
+        <h2>역사</h2>
+        <p>북구 일대는 삼한시대 변한 문화권에 속했고 금관가야의 영향을 거쳐 신라 지증왕 때 복속되었으며, 통일신라기에는 삽량주·양주에 편제되었습니다. 지역명 &#x27;구포(龜浦)&#x27;는 낙동강을 향해 고개를 뻗은 거북 모양의 산줄기에서 유래한 &#x27;거북이 포구&#x27;라는 뜻으로, 낙동강 수운이 발달한 나루터의 역사를 담고 있습니다. 1682년 세곡을 저장하던 감동창이 설치되면서 구포는 낙동강 물류의 거점으로 크게 번성했고, 오일장 구포장은 인근 평야와 동래 지역을 잇는 교역 중심지가 되었습니다. 1919년 3월 29일 구포장터에서는 대규모 만세운동이 일어나 오늘날 구포만세거리로 기념되고 있습니다. 행정구역으로는 1978년 2월 15일 부산진구와 김해군 일부를 관할로 북구가 신설되었고, 1988년 자치구로 승격한 뒤 1989년 강서구, 1995년 사상구가 잇따라 분리되어 지금의 구역이 확정되었습니다.</p>
+      </section>
+      <section id="geography">
+        <h2>지리·자연환경</h2>
+        <p>북구는 부산광역시의 서북부 끝자락에 자리하며 김해평야를 사이에 두고 낙동강과 마주하는 전형적인 동고서저 지형을 이룹니다. 동쪽으로는 해발 800m가 넘는 금정산과 백양산 능선이 병풍처럼 솟아 금정구·사상구와 경계를 짓고, 서쪽 저지대에는 낙동강 본류가 남북으로 흐르며 넓은 강안 평지를 만들어 냅니다. 산지에서 발원한 대천천과 대치천이 시가지를 가로질러 낙동강으로 흘러들며, 대천천 계곡은 여름철 도심 피서지로 사랑받습니다. 낙동강 하구의 넓은 둔치에는 화명생태공원과 갈대·연꽃 습지가 조성되어 철새가 찾아드는 생태 공간이 형성되었습니다. 산과 강 사이 좁은 회랑을 따라 구포·덕천·화명·금곡의 시가지가 남북으로 길게 이어지는 것이 이 지역 지형의 특징입니다. 대동화명대교와 구포대교가 낙동강을 건너 김해·강서 방면과 연결됩니다.</p>
+      </section>
+      <section id="characteristics">
+        <h2>지역 특징</h2>
+        <p>북구의 인구는 2021년 기준 약 28만 3천 명으로, 화명·덕천 신도시 개발 이후 부산 서북부의 밀집 주거 지역으로 자리 잡았습니다. 면적은 39.36㎢이며 구포동·금곡동·화명동·덕천동·만덕동 5개 법정동을 13개 행정동으로 나누어 운영합니다. 산업 구조는 대규모 아파트 단지를 배후로 한 생활 밀착형 상업·서비스업 중심이며, 구포시장과 덕천·화명의 상권이 지역 경제의 축을 이룹니다. 일제강점기와 6·25 피난 시절 미군 구호 밀가루로 만들어 먹던 구포국수는 이 지역을 상징하는 서민 음식으로, 오늘날 향토 먹거리 브랜드로 계승되고 있습니다. 부산과학기술대학교와 한국폴리텍7대학 부산캠퍼스 등 교육기관이 자리해 젊은 인구 유입에도 기여합니다. 낙동강을 낀 강변 도시이면서 신도시와 재래시장이 공존하는 이중적 도시 성격이 북구를 규정합니다.</p>
+      </section>
+      <section id="landmarks">
+        <h2>대표 명소</h2>
+        <ul>
+          <li><strong>구포시장</strong> — 조선 후기 오일장 &#x27;구포장&#x27;에서 비롯된 400년 전통의 재래시장으로, 낙동강 물류의 집산지였던 역사를 이어받아 지금도 부산 서북부 최대 규모의 활기찬 전통시장으로 운영됩니다.</li>
+          <li><strong>화명생태공원</strong> — 구포에서 대동화명대교에 이르는 낙동강 둔치에 조성된 대형 강변 공원으로, 봄 유채와 여름 연꽃, 가을 코스모스가 계절마다 장관을 이루고 야구장·축구장 등 38면의 체육시설을 갖추고 있습니다.</li>
+          <li><strong>금빛노을브릿지</strong> — 2021년 화명생태공원 앞 낙동강에 준공된 부산 최장 보행교로, 강 위로 뻗은 곡선 데크에서 노을과 야경을 감상할 수 있어 북구의 새로운 랜드마크로 떠올랐습니다.</li>
+          <li><strong>구포만세거리</strong> — 1919년 3월 29일 구포장터에서 일어난 만세운동을 기념해 조성된 거리로, 구포국수체험관과 벽화·기념 조형물이 어우러져 지역의 항일 역사를 되새기는 공간입니다.</li>
+        </ul>
+      </section>
+      <section id="heritage">
+        <h2>문화유산·문화시설</h2>
+        <ul>
+          <li><strong>만덕사지 당간지주</strong> — 만덕동에 자리한 통일신라 후기에서 고려 전기의 사찰 터 유적으로, 절터의 흔적은 대부분 사라졌으나 입구로 추정되는 곳에 당간지주가 남아 당시 대규모 가람의 규모를 짐작하게 합니다.</li>
+          <li><strong>부산북구역사문화홍보관</strong> — 2023년 1월 개관한 문화시설로 북구 연대기, 문화재, 구포만세운동, 구포나루, 구포 먹거리, 근대유물 등을 전시해 지역의 역사와 문화를 한눈에 살펴볼 수 있습니다.</li>
+          <li><strong>낙동강 구포나루 축제</strong> — 구포 감동진의 역사와 문화에 현대적 감성을 더한 북구의 대표 향토 축제로, 화명생태공원 연꽃단지 일원에서 열려 낙동강 나루의 정취를 재현합니다.</li>
+          <li><strong>구포국수체험관</strong> — 피난 시절 서민의 소울푸드였던 구포국수를 주제로 한 체험시설로, 국수를 맛보고 구입하는 공간과 맷돌·반죽 체험, 어린이 국수 만들기 체험을 층별로 갖추고 있습니다.</li>
+          <li><strong>덕천동 고분군·율리 바위그늘유적</strong> — 덕천동 고분군과 금곡동 율리의 바위그늘유적은 선사·삼국시대 사람들의 생활상을 보여주는 유적으로, 낙동강 유역에 일찍부터 사람이 정착했음을 증언합니다.</li>
+        </ul>
+      </section>
+      <section id="nature">
+        <h2>자연·휴식</h2>
+        <ul>
+          <li><strong>화명수목원</strong> — 금정산 자락에 조성된 부산 최초의 공립수목원으로, 수목유전자원을 보존·전시하며 사계절 다양한 식물을 관찰할 수 있어 가족 나들이와 생태 체험 명소로 인기가 높습니다.</li>
+          <li><strong>대천천 계곡</strong> — 금정산에서 발원해 화명동을 지나는 대천천의 상류 계곡으로, 맑은 물과 숲그늘이 어우러져 여름철 도심 속 피서지이자 산책·물놀이 공간으로 사랑받습니다.</li>
+          <li><strong>금정산·백양산 등산로</strong> — 구 동쪽을 병풍처럼 감싸는 금정산과 백양산은 만덕고개를 넘나드는 능선 산행 코스를 품고 있어, 주민들이 즐겨 찾는 도심 근교 등산 명소입니다.</li>
+          <li><strong>화명장미원</strong> — 화명생태공원 안에 조성된 장미 정원으로, 초여름이면 형형색색의 장미가 만개해 은은한 꽃향기 속에서 산책과 사진 촬영을 즐길 수 있는 휴식 공간입니다.</li>
+          <li><strong>낙동강 자전거길</strong> — 화명생태공원을 따라 이어지는 낙동강변 자전거길은 강바람을 맞으며 라이딩과 조깅을 즐길 수 있는 코스로, 부산과 김해 방면으로 길게 연결됩니다.</li>
+        </ul>
+      </section>
+      <section id="transport">
+        <h2>교통</h2>
+        <p>북구는 부산 도시철도 2호선과 3호선이 관통해 시내 곳곳으로의 접근성이 좋습니다. 2호선은 금곡·동원·율리·화명·수정·덕천·구명·구남역을 지나 화명·금곡 신도시와 서면 방면을 잇고, 3호선은 구포·덕천·숙등·남산정·만덕역을 거쳐 덕천에서 2호선과 환승됩니다. 덕천역은 두 노선이 만나는 환승 거점으로 북구 교통의 중심 역할을 합니다. 도로 교통으로는 낙동강을 건너는 구포대교와 대동화명대교가 김해·강서 방면과 연결되고, 만덕터널과 만덕고개가 동래·도심 방면 통행로 역할을 합니다. 경부선 구포역은 일부 무궁화호·KTX가 정차하는 철도 관문으로, 부산 서북부에서 서울·경상권으로 향하는 이용객이 많습니다.</p>
+      </section>
+      <section id="symbols">
+        <h2>지역 상징</h2>
+        <ul class="symbols">
+          <li>구화(꽃): 철쭉</li>
+          <li>구목(나무): 팽나무</li>
+          <li>구조(새): 까치</li>
+        </ul>
+      </section>
+      <section id="faq">
+        <h2>자주 묻는 질문</h2>
+        <div class="faq">
+          <details>
+            <summary>북구청은 어디에 있나요?</summary>
+            <p>부산광역시 북구 낙동대로1570번길 33(구포동)에 있으며, 도시철도 3호선 구포역과 가깝습니다.</p>
+          </details>
+          <details>
+            <summary>&#x27;구포&#x27;라는 지명은 어떻게 생겼나요?</summary>
+            <p>낙동강을 향해 고개를 뻗은 거북 모양의 산줄기에서 유래해 &#x27;거북이 포구&#x27;를 뜻하는 구포(龜浦)라는 이름이 붙었습니다.</p>
+          </details>
+          <details>
+            <summary>북구를 대표하는 음식은 무엇인가요?</summary>
+            <p>일제강점기와 6·25 피난 시절 서민의 소울푸드였던 구포국수가 대표 음식으로, 구포만세거리의 구포국수체험관에서 맛보고 체험할 수 있습니다.</p>
+          </details>
+          <details>
+            <summary>화명생태공원과 화명수목원은 어떻게 다른가요?</summary>
+            <p>화명생태공원은 낙동강 둔치의 강변 습지·체육공원이고, 화명수목원은 금정산 자락에 조성된 부산 최초의 공립수목원으로 성격이 다릅니다.</p>
+          </details>
+          <details>
+            <summary>북구에서 지하철로 이동하기 편한가요?</summary>
+            <p>도시철도 2호선과 3호선이 지나고 덕천역에서 두 노선이 환승되어 서면·연산·부산역 등 도심 방면 이동이 편리합니다.</p>
+          </details>
+          <details>
+            <summary>구포만세거리는 어떤 곳인가요?</summary>
+            <p>1919년 3월 29일 구포장터에서 일어난 만세운동을 기념하는 거리로, 항일 역사와 구포국수 문화를 함께 만날 수 있는 명소입니다.</p>
+          </details>
+        </div>
+      </section>
+      <section id="links">
+        <h2>공식 링크</h2>
+        <ul>
+          <li><a href="https://www.bsbukgu.go.kr/" rel="noopener">부산광역시 북구청</a></li>
+          <li><a href="https://www.bsbukgu.go.kr/tour/index.bsbukgu" rel="noopener">부산 북구 문화관광</a></li>
+        </ul>
+      </section>
+      <section id="sources">
+        <h2>출처</h2>
+        <ul class="sources">
+          <li><a href="https://ko.wikipedia.org/wiki/%EB%B6%81%EA%B5%AC_(%EB%B6%80%EC%82%B0%EA%B4%91%EC%97%AD%EC%8B%9C)" rel="noopener">북구 (부산광역시) - 위키백과</a> (조회 2026-07-08)</li>
+          <li><a href="https://www.bsbukgu.go.kr/tour/index.bsbukgu" rel="noopener">부산광역시 북구청 문화관광</a> (조회 2026-07-08)</li>
+          <li><a href="https://ko.wikipedia.org/wiki/%EA%B5%AC%ED%8F%AC%EC%8B%9C%EC%9E%A5" rel="noopener">구포시장 - 위키백과</a> (조회 2026-07-08)</li>
+          <li><a href="https://encykorea.aks.ac.kr/Article/E0066993" rel="noopener">북구(부산광역시) - 한국민족문화대백과사전</a> (조회 2026-07-08)</li>
+          <li><a href="https://www.busan.go.kr/nakdong/hwamyungpark01" rel="noopener">화명생태공원 - 부산광역시 낙동강관리본부</a> (조회 2026-07-08)</li>
+        </ul>
+      </section> wrapper — sections styled generically so injected markup lands beautifully */
+.buk-flow{display:flex;flex-direction:column;gap:clamp(56px,9vh,120px)}
+.buk-flow section{
+  position:relative;scroll-margin-top:80px;
+  border-left:1px solid rgba(65,105,225,.35);
+  padding:4px 0 4px clamp(22px,4vw,54px);
+  will-change:transform,filter,opacity;
+}
+.buk-flow section::before{
+  content:"";position:absolute;left:-6px;top:12px;width:11px;height:11px;border-radius:50%;
+  background:var(--buk-lawn);box-shadow:0 0 0 5px rgba(124,252,0,.14),0 0 22px rgba(124,252,0,.5);
+}
+.buk-flow section > h2{
+  font-family:'Noto Sans KR','Raleway',sans-serif;font-weight:700;
+  font-size:clamp(1.5rem,3.6vw,2.5rem);line-height:1.15;margin:0 0 22px;
+  color:#fff;letter-spacing:-.01em;position:relative;
+}
+.buk-flow section > h2::after{
+  content:"";display:block;width:64px;height:3px;margin-top:16px;border-radius:3px;
+  background:linear-gradient(90deg,var(--buk-royal),var(--buk-lawn));
+}
+.buk-flow section p{margin:0 0 16px;font-weight:300;font-size:clamp(1rem,1.9vw,1.16rem);color:var(--buk-mist)}
+.buk-flow section p:last-child{margin-bottom:0}
+.buk-flow a{color:var(--buk-lawn);text-decoration:none;border-bottom:1px solid rgba(124,252,0,.4);transition:color .2s}
+.buk-flow a:hover{color:#fff}
+
+/* facts grid */
+.buk-flow .facts{list-style:none;padding:0;margin:8px 0 0;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px}
+.buk-flow .facts li{
+  background:rgba(65,105,225,.10);border:1px solid rgba(65,105,225,.28);
+  border-radius:14px;padding:18px 20px;font-weight:400;font-size:.98rem;color:#fff;
+  backdrop-filter:blur(4px);
+}
+.buk-flow .facts li strong{display:block;font-family:'Raleway',sans-serif;font-weight:800;letter-spacing:.16em;text-transform:uppercase;font-size:11px;color:var(--buk-lawn);margin-bottom:6px}
+
+/* symbols */
+.buk-flow .symbols{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:16px;padding:0;margin:8px 0 0;list-style:none}
+.buk-flow .symbols li,.buk-flow .symbols > div{
+  background:rgba(124,252,0,.06);border:1px solid rgba(124,252,0,.3);
+  border-radius:16px;padding:20px;color:#fff;font-weight:400;
+}
+.buk-flow .symbols strong{color:var(--buk-lawn)}
+
+/* faq details */
+.buk-flow .faq details,.buk-flow details{
+  border:1px solid rgba(65,105,225,.32);border-radius:14px;
+  margin:0 0 12px;padding:0;background:rgba(8,22,58,.5);overflow:hidden;
+}
+.buk-flow .faq summary,.buk-flow details summary{
+  cursor:pointer;list-style:none;padding:18px 22px;font-weight:500;color:#fff;
+  display:flex;align-items:center;gap:14px;position:relative;
+}
+.buk-flow .faq summary::-webkit-details-marker,.buk-flow details summary::-webkit-details-marker{display:none}
+.buk-flow .faq summary::before,.buk-flow details summary::before{
+  content:"";flex:0 0 auto;width:22px;height:22px;border-radius:50%;
+  border:1px solid var(--buk-lawn);background:
+    linear-gradient(var(--buk-lawn),var(--buk-lawn)) center/10px 2px no-repeat,
+    linear-gradient(var(--buk-lawn),var(--buk-lawn)) center/2px 10px no-repeat;
+  transition:transform .25s;
+}
+.buk-flow .faq details[open] summary::before,.buk-flow details[open] summary::before{transform:rotate(45deg)}
+.buk-flow .faq details > *:not(summary),.buk-flow details > *:not(summary){padding:0 22px 20px;margin:0;font-weight:300;color:var(--buk-mist)}
+.buk-flow .faq details p,.buk-flow details p{padding:0 22px 20px !important}
+
+/* generic list fallback */
+.buk-flow section ul:not(.facts):not(.symbols){padding-left:20px;margin:8px 0 0}
+.buk-flow section ul:not(.facts):not(.symbols) li{margin:0 0 10px;font-weight:300;color:var(--buk-mist)}
+
+/* velocity states applied to <html>/body via JS */
+.buk-vel-1 .buk-flow section{transition:transform .5s ease,filter .5s ease,opacity .5s ease}
+.buk-root[data-vel="rush"] .buk-flow section{filter:blur(var(--buk-blur,0px))}
+
+/* footer strip */
+.buk-tail{position:relative;z-index:1;text-align:center;padding:10vh 20px 8vh;border-top:1px solid rgba(65,105,225,.22)}
+.buk-tail .buk-kicker{justify-content:center}
+.buk-tail .buk-kicker::before{display:none}
+.buk-tail h3{font-family:'Raleway',sans-serif;font-weight:800;font-size:clamp(1.4rem,4vw,2.4rem);color:#fff;margin:6px 0 14px;letter-spacing:.02em}
+.buk-tail p{color:var(--buk-mist);font-weight:300;max-width:560px;margin:0 auto}
+
+@media (prefers-reduced-motion:reduce){
+  .buk-flow section{transition:none !important;filter:none !important;transform:none !important;opacity:1 !important}
+  .buk-scrollcue .buk-mouse::after{animation:none}
+}
+@media (max-width:640px){
+  .buk-flow .facts{grid-template-columns:1fr}
+  .buk-scrollcue{position:static;margin-top:40px}
+}
+</style>
+
+<div class="buk-root" id="buk-root">
+  <div class="buk-riverbg" aria-hidden="true">
+    <canvas id="buk-river-canvas"></canvas>
+  </div>
+
+  <header class="buk-hero buk-shell">
+    <p class="buk-kicker">부산광역시 · kr-busan-buk</p>
+    <h1 class="buk-title">낙동강이 감아 도는<span class="buk-drop">북구</span></h1>
+    <p class="buk-lead">부산광역시 북구는 낙동강 물길과 금정산 자락이 맞닿는 강변 도심으로, 오랜 세월 &#x27;구포나루&#x27;를 중심으로 사람과 물자가 모여든 교역의 고장입니다. 조선 후기부터 이어진 구포장(구포시장)은 낙동강 유역 곡물과 생활물자가 집산되던 상권의 심장이었고, 오늘날에도 400년 전통의 재래시장으로 활기를 잇고 있습니다. 화명·덕천·만덕 일대는 1990년대 이후 대규모 아파트 신도시로 탈바꿈해 30만 명 가까운 주민이 사는 부산 서북부의 대표 주거지로 성장했습니다. 강변에는 화명생태공원과 금빛노을브릿지가 펼쳐지고, 금정산 기슭에는 부산 최초의 공립 화명수목원이 자리해 도심 속 자연 휴식처가 풍부합니다. 구포국수와 구포만세운동으로 상징되는 서민의 삶과 저항의 역사가 켜켜이 쌓인, 이야기가 있는 동네입니다.</p>
+
+    <div class="buk-velbadge" id="buk-velbadge">
+      <span>휠 벨로시티</span>
+      <span class="buk-gauge"><i id="buk-gauge-fill"></i></span>
+      <b id="buk-vel-read">0</b>
+    </div>
+
+    <div class="buk-scrollcue" aria-hidden="true">
+      <span class="buk-mouse"></span>
+      <span>휠을 굴려 강을 따라 내려가세요</span>
+    </div>
+  </header>
+
+  <main class="buk-stage buk-shell">
+    <div class="buk-stage-head">
+      <p class="buk-kicker">강을 따라 읽는 북구</p>
+      <p>스크롤 속도가 빠를수록 물살이 거세지고 화면이 흐려집니다. 천천히 굴리면 북구의 이야기가 또렷하게 흐릅니다.</p>
+    </div>
+
+    <div class="buk-flow" id="buk-flow">
       <section id="intro">
         <h2>지역 소개</h2>
         <p>부산광역시 북구는 낙동강 물길과 금정산 자락이 맞닿는 강변 도심으로, 오랜 세월 &#x27;구포나루&#x27;를 중심으로 사람과 물자가 모여든 교역의 고장입니다. 조선 후기부터 이어진 구포장(구포시장)은 낙동강 유역 곡물과 생활물자가 집산되던 상권의 심장이었고, 오늘날에도 400년 전통의 재래시장으로 활기를 잇고 있습니다. 화명·덕천·만덕 일대는 1990년대 이후 대규모 아파트 신도시로 탈바꿈해 30만 명 가까운 주민이 사는 부산 서북부의 대표 주거지로 성장했습니다. 강변에는 화명생태공원과 금빛노을브릿지가 펼쳐지고, 금정산 기슭에는 부산 최초의 공립 화명수목원이 자리해 도심 속 자연 휴식처가 풍부합니다. 구포국수와 구포만세운동으로 상징되는 서민의 삶과 저항의 역사가 켜켜이 쌓인, 이야기가 있는 동네입니다.</p>
@@ -257,9 +654,176 @@ footer { margin-top: 3rem; padding-top: 1rem; border-top: 1px solid var(--line);
         </ul>
       </section>
     </div>
-    <footer>
-      <p>이 페이지는 공개 자료를 바탕으로 작성된 북구 지역 정보 페이지입니다.</p>
-    </footer>
   </main>
+
+  <footer class="buk-tail buk-shell">
+    <p class="buk-kicker">부산광역시 북구</p>
+    <h3>낙동강 물길처럼, 흐르는 도시</h3>
+    <p>구포와 화명, 금정산 자락과 강변을 잇는 북구 — 물살의 속도로 읽어 내려온 지역의 기록입니다.</p>
+  </footer>
+</div>
+
+<script>
+(function(){
+  var root=document.getElementById('buk-root');
+  if(!root)return;
+  var reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* ---- read region-data JSON as progressive enhancement (optional accents) ---- */
+  var data=null;
+  try{
+    var el=document.getElementById('region-data');
+    if(el)data=JSON.parse(el.textContent||el.innerText||'{}');
+  }catch(e){data=null;}
+
+  /* ---- NAKDONG RIVER canvas: velocity-reactive flowing bands ---- */
+  var canvas=document.getElementById('buk-river-canvas');
+  var ctx=canvas&&canvas.getContext?canvas.getContext('2d'):null;
+  var W=0,H=0,dpr=Math.min(window.devicePixelRatio||1,2);
+  function resize(){
+    if(!canvas)return;
+    W=canvas.clientWidth;H=canvas.clientHeight;
+    canvas.width=Math.max(1,W*dpr);canvas.height=Math.max(1,H*dpr);
+    if(ctx)ctx.setTransform(dpr,0,0,dpr,0,0);
+  }
+  var bands=[];
+  var COL_ROYAL='rgba(65,105,225,';
+  var COL_LAWN='rgba(124,252,0,';
+  function buildBands(){
+    bands=[];
+    var n=9;
+    for(var i=0;i<n;i++){
+      bands.push({
+        base:i/(n-1),
+        amp:14+Math.random()*30,
+        len:0.006+Math.random()*0.010,
+        phase:Math.random()*Math.PI*2,
+        depth:0.25+ (i/n)*0.9,
+        lawn:i%3===0,
+        thick:1+Math.random()*2.2
+      });
+    }
+  }
+  var t=0, vel=0, velSmooth=0;
+  function drawRiver(){
+    if(!ctx){return;}
+    ctx.clearRect(0,0,W,H);
+    var speed=0.006 + velSmooth*0.9;
+    t+=speed;
+    for(var b=0;b<bands.length;b++){
+      var band=bands[b];
+      var y0=band.base*H;
+      ctx.beginPath();
+      for(var x=0;x<=W;x+=6){
+        var y=y0
+          + Math.sin(x*band.len + t*(1+band.depth) + band.phase)*band.amp*(0.6+velSmooth*1.6)
+          + Math.sin(x*band.len*0.4 - t*0.7 + band.phase)*band.amp*0.4;
+        if(x===0)ctx.moveTo(x,y);else ctx.lineTo(x,y);
+      }
+      var a=(0.05+band.depth*0.09)*(1+velSmooth*0.5);
+      if(a>0.28)a=0.28;
+      ctx.strokeStyle=(band.lawn?COL_LAWN:COL_ROYAL)+a.toFixed(3)+')';
+      ctx.lineWidth=band.thick*(1+velSmooth*1.2);
+      ctx.stroke();
+    }
+    /* velocity smoothing / decay */
+    velSmooth+=(vel-velSmooth)*0.12;
+    vel*=0.90;
+    if(velSmooth<0.0005)velSmooth=0;
+    updateGauge(velSmooth);
+    raf=requestAnimationFrame(drawRiver);
+  }
+  var raf=null;
+
+  /* ---- gauge + blur/parallax driven by wheel velocity ---- */
+  var gaugeFill=document.getElementById('buk-gauge-fill');
+  var velRead=document.getElementById('buk-vel-read');
+  function updateGauge(v){
+    var pct=Math.min(100,Math.round(8+v*260));
+    if(gaugeFill)gaugeFill.style.width=pct+'%';
+    if(velRead)velRead.textContent=Math.round(Math.min(999,v*1400));
+    var blur=Math.min(3.4,v*10);
+    root.style.setProperty('--buk-blur',blur.toFixed(2)+'px');
+    root.setAttribute('data-vel', v>0.02?'rush':'calm');
+  }
+
+  /* accumulate wheel velocity (delta magnitude over time) */
+  var lastWheel=0;
+  window.addEventListener('wheel',function(ev){
+    var now=performance.now();
+    var dt=Math.max(16,now-lastWheel);lastWheel=now;
+    var mag=Math.abs(ev.deltaY)/dt; /* px per ms */
+    vel=Math.min(1.4, vel + mag*0.06);
+  },{passive:true});
+  /* touch fallback: fling adds a little velocity */
+  var lastTouch=0,lastTouchY=0;
+  window.addEventListener('touchmove',function(ev){
+    if(!ev.touches||!ev.touches.length)return;
+    var y=ev.touches[0].clientY,now=performance.now();
+    var dt=Math.max(16,now-lastTouch);
+    var mag=Math.abs(y-lastTouchY)/dt;
+    vel=Math.min(1.4,vel+mag*0.05);
+    lastTouch=now;lastTouchY=y;
+  },{passive:true});
+
+  /* ---- section reveal + velocity-scaled parallax drift on scroll ---- */
+  var sections=Array.prototype.slice.call(document.querySelectorAll('#buk-flow > section'));
+  sections.forEach(function(s,i){
+    if(!reduce){s.style.opacity='0';s.style.transform='translateY(48px)';}
+  });
+  if('IntersectionObserver' in window && !reduce){
+    var io=new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if(en.isIntersecting){
+          en.target.style.opacity='1';
+          en.target.style.transform='translateY(0)';
+          io.unobserve(en.target);
+        }
+      });
+    },{threshold:0.12,rootMargin:'0px 0px -8% 0px'});
+    sections.forEach(function(s){io.observe(s);});
+  }else{
+    sections.forEach(function(s){s.style.opacity='1';s.style.transform='none';});
+  }
+
+  /* parallax: faster wheel -> sections drift + blur momentarily (enhancement only) */
+  var ticking=false;
+  function onScroll(){
+    if(ticking)return;ticking=true;
+    requestAnimationFrame(function(){
+      var vp=window.innerHeight;
+      var drift=velSmooth*26; /* velocity governs drift strength */
+      for(var i=0;i<sections.length;i++){
+        var s=sections[i];
+        var r=s.getBoundingClientRect();
+        if(r.bottom<-200||r.top>vp+200)continue;
+        var center=(r.top+r.height/2)-vp/2;
+        var p=center/vp; /* -0.5..0.5 */
+        var ty=-p*drift;
+        var bl=Math.min(2.6,velSmooth*7);
+        s.style.transform='translateY('+ty.toFixed(1)+'px)';
+        s.style.filter=bl>0.05?'blur('+bl.toFixed(2)+'px)':'none';
+      }
+      ticking=false;
+    });
+  }
+  if(!reduce)window.addEventListener('scroll',onScroll,{passive:true});
+
+  /* ---- boot ---- */
+  function boot(){
+    resize();buildBands();
+    if(ctx&&!reduce){raf=requestAnimationFrame(drawRiver);}
+    else if(ctx){ /* static single frame for reduced-motion */ velSmooth=0;drawRiver&&drawRiver();cancelAnimationFrame(raf);}
+  }
+  window.addEventListener('resize',function(){resize();buildBands();},{passive:true});
+  boot();
+
+  /* pause rAF when tab hidden */
+  document.addEventListener('visibilitychange',function(){
+    if(document.hidden){if(raf)cancelAnimationFrame(raf);raf=null;}
+    else if(!raf&&ctx&&!reduce){raf=requestAnimationFrame(drawRiver);}
+  });
+})();
+</script>
 </body>
 </html>
